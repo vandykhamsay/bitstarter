@@ -72,3 +72,9 @@ if(require.main == module) {
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
+rest.get(url).on('complete', function(result, response){  
+            fs.writeFileSync(outfile, result);
+            checkJson = checkHtmlFile(outfile, program.checks);
+            var outJson = JSON.stringify(checkJson, null, 4);
+            console.log(outJson);
+        });
