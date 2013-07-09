@@ -70,4 +70,4 @@ if(require.main == module) {
         rest.get(url).on('complete', function(result, response){                      
             console.log(result);
 });}
-
+}
